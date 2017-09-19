@@ -1,7 +1,3 @@
-# influxtor
-A asynchronous influxdb client with tornado, modified from[https://github.com/influxdata/influxdb-python](https://github.com/influxdata/influxdb-python)
-# Example
-```python
 # coding: utf-8
 
 import tornado.ioloop
@@ -79,4 +75,3 @@ if __name__ == "__main__":
     app = make_app()
     app.listen(8888)
     tornado.ioloop.IOLoop.current().start()
-```
