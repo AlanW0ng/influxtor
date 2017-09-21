@@ -27,7 +27,7 @@ class QueryHandler(tornado.web.RequestHandler):
             self.write("Wrong \"m\"")
             return
         remote_ip = self.request.remote_ip
-        query_str = "SELECT value FROM example_data where remote_ip = '%s' and time > now() - %dm" % (remote_ip, minutes_ago)
+        query_str = "SELECT value FROM example_data WHERE remote_ip = '%s' AND time > now() - %dm" % (remote_ip, minutes_ago)
         res = yield client.query(query_str)
         self.write("{0}".format(res))
 
